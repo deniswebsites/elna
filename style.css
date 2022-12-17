@@ -455,6 +455,39 @@ textarea:focus {
     font-size: 22px;
     line-height: 32px;
     color: #262626;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: color;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: color;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: color;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.tel_link:link,
+.tel_link:visited {
+    color: #262626;
+}
+
+.tel_link:active,
+.tel_link.active {
+    color: #AC1417;
+}
+
+.tel_link:hover {
+    color: #AC1417;
 }
 
 .tel_wrapp p {
