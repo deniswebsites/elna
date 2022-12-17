@@ -1847,6 +1847,11 @@ footer {
     border-radius: 0;
 }
 
+.quiz_thumb_5 .img_box img {
+    min-width: auto;
+    min-height: auto;
+}
+
 .quiz_title_2 {
     display: block;
 }
@@ -2047,11 +2052,8 @@ body.fixed {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
     z-index: 2;
+    position: relative;
 }
 
 .close {
