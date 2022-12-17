@@ -32,10 +32,10 @@
 						<div class="center">
 							<div class="main_nav_wrapp" id="resp_nav">
 								<ul class="main_nav">
-									<li><a href="#">условия</a></li>
-									<li><a href="#">Каталог</a></li>
-									<li><a href="#">вопросы</a></li>
-									<li><a href="#">контакты</a></li>
+									<li><a href="#conditions">условия</a></li>
+									<li><a href="#catalog">Каталог</a></li>
+									<li><a href="#questions">вопросы</a></li>
+									<li><a href="#contacts">контакты</a></li>
 								</ul>
 							</div>
 						</div>
@@ -97,14 +97,14 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="yellow_pill">Рассчитать стоимость онлайн</a>
+					<a href="#" class="yellow_pill" data-popup-link = "quiz_popup">Рассчитать стоимость онлайн</a>
 				</div>
 				<img class="promo_img animate fadeIn" style="transition-delay: .7s" src="img/promo_img.png" alt="" />
 			</div>
 		</section>
 		<!-- /Section 1 - Main Page -->
 		<!-- Section 2 - Main Page -->
-		<section>
+		<section id="conditions">
 			<div class="row row_2">
 				<div class="thumbs_2_wrapp">
 					<div class="animate leftSlice">
@@ -164,7 +164,7 @@
 		</section>
 		<!-- /Section 2 - Main Page -->
 		<!-- Section 3 - Main Page -->
-		<section>
+		<section id="catalog">
 			<div class="row row_2">
 				<div class="catalog_wrapp">
 					<div class="h2_wrapp white">
@@ -172,7 +172,7 @@
 					</div>
 					<div class="catalog_thumbs">
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_01.jpg" alt="" />
@@ -187,7 +187,7 @@
 							</a>
 						</div>
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_02.jpg" alt="" />
@@ -202,7 +202,7 @@
 							</a>
 						</div>
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_03.jpg" alt="" />
@@ -217,7 +217,7 @@
 							</a>
 						</div>
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_04.jpg" alt="" />
@@ -232,7 +232,7 @@
 							</a>
 						</div>
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_05.jpg" alt="" />
@@ -247,7 +247,7 @@
 							</a>
 						</div>
 						<div>
-							<a href="#" class="catalog_thumb">
+							<a href="#" class="catalog_thumb" data-popup-link = "catalog_popup" >
 								<div class="catalog_thumb_inner">
 									<div class="img_box">
 										<img src="img/img_06.jpg" alt="" />
@@ -267,7 +267,7 @@
 		</section>
 		<!-- /Section 3 - Main Page -->
 		<!-- Section 4 - Main Page -->
-		<section class="sect_4">
+		<section class="sect_4" id="questions">
 			<div class="row">
 				<div class="h2_wrapp">
 					<h2>Вопросы наших клиентов</h2>
@@ -335,9 +335,9 @@
 		</section>
 		<!-- /Section 4 - Main Page -->
 		<!-- Section 5 - Main Page -->
-		<section>
+		<section class="sect_5" id="contacts">
 			<div class="row row_2">
-				<div class="map" id="map"></div>
+				<!-- <div class="map" id="map" data-zoom = "16" data-lat = "37.601214" data-long="55.586960" ></div> -->
 			</div>
 		</section>
 		<!-- /Section 5 - Main Page -->
@@ -365,9 +365,441 @@
 
 	</div>
 
+	<!--  Popup -->
+	<div class="lp_popup" data-popup = "quiz_popup">
+		<div class="lp_popup_content">
+			<!-- Quiz -->
+			<div class="quiz">
+				<div class="quiz_close">
+					<div>
+						<button type="button" class="close lp_close_popup"></button>
+					</div>
+				</div>
+				<div class="quiz_inner_wrapp">
+					<div class="quiz_steps_bar" style="width: 12.5%"></div>
+					<div class="quiz_tabs_wrapp">
+						<div class="quiz_tab active" data-index = "1">
+							<div class="quiz_title">
+								<div>
+									<h3>В каком стиле вы хотите кухню?</h3>
+								</div>
+								<div>
+									<p><span>01</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb">
+										<input type="checkbox" value="qwqww" />
+										<span class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Классика</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_02.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Модерн</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_03.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Хай-тек</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_04.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Лофт</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_05.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Минимализм</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_06.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Прованс</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_07.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Скандинавия</span>
+									</label>
+									<label class="quiz_thumb">
+										<input type="checkbox" id="" value="" />
+										<span class="img_box">
+											<img src="img/q_08.jpg" alt="" />
+										</span>
+										<span class="quiz_thumb_val">Электрика</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "2">
+							<div class="quiz_title">
+								<div>
+									<h3>какая длина вашей будущей кухни?</h3>
+								</div>
+								<div>
+									<p><span>02</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_thumbnails">
+								<label class="quiz_thumb quiz_thumb_2">
+									<input type="checkbox" value="qwqww" />
+									<div class="img_box">
+										<img src="img/1.jpg" alt="" />
+									</div>
+									<span class="quiz_thumb_val">2-3 метра</span>
+								</label>
+								<label class="quiz_thumb quiz_thumb_2">
+									<input type="checkbox" value="qwqww" />
+									<div class="img_box">
+										<img src="img/1.jpg" alt="" />
+									</div>
+									<span class="quiz_thumb_val">3-4 метров</span>
+								</label>
+								<label class="quiz_thumb quiz_thumb_2">
+									<input type="checkbox" value="qwqww" />
+									<div class="img_box">
+										<img src="img/1.jpg" alt="" />
+									</div>
+									<span class="quiz_thumb_val">4-5 метров</span>
+								</label>
+								<label class="quiz_thumb quiz_thumb_2">
+									<input type="checkbox" value="qwqww" />
+									<div class="img_box">
+										<img src="img/1.jpg" alt="" />
+									</div>
+									<span class="quiz_thumb_val">5-7 метров</span>
+								</label>
+								<label class="quiz_thumb quiz_thumb_2">
+									<input type="checkbox" value="qwqww" />
+									<div class="img_box">
+										<img src="img/1.jpg" alt="" />
+									</div>
+									<span class="quiz_thumb_val">Более 7 метров</span>
+								</label>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "3">
+							<div class="quiz_title">
+								<div>
+									<h3>выберите форму вашей кухни:</h3>
+								</div>
+								<div>
+									<p><span>03</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb quiz_thumb_3">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Прямая</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_3">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Угловая</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_3">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">П-образная</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_3">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">С островом</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "4">
+							<div class="quiz_title">
+								<div>
+									<h3>выберите материал фасада:</h3>
+								</div>
+								<div>
+									<p><span>04</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">МДФ в пленке (подешевле)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">ДСП (подешевле)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Пластик (средняя стоим-ть)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">МДФ в рамке (подороже)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">МДФ в краске (подороже)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Массив (подороже)</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "5">
+							<div class="quiz_title">
+								<div>
+									<h3>выберите столешницу:</h3>
+								</div>
+								<div>
+									<p><span>05</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Пластик, 28мм, влагостойкая (подешевле)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Пластик, 38мм, влагостойкая (средняя цена)</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Искуственный камень (средняя цена)</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "6">
+							<div class="quiz_title">
+								<div>
+									<h3>без каких элементов вы не представляете свою кухню?</h3>
+								</div>
+								<div>
+									<p><span>06</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Удобный доступ к сушке</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Плавное открывание фасадов</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Карго для хранения бакалеи</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Надежные выдвижные ящики</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Подсветка</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_4">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Ничего не нужно</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "7">
+							<div class="quiz_title">
+								<div>
+									<h3>выберите подарок к кухне:</h3>
+								</div>
+								<div>
+									<p><span>07</span>/<span>07</span></p>
+								</div>
+							</div>
+							<div class="quiz_cards">
+								<div class="quiz_thumbnails">
+									<label class="quiz_thumb quiz_thumb_5">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Вытяжка стоимостью 6000р</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_5">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Мойка стоимостью 6650р</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_5">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Смеситель стоимостью 6100р</span>
+									</label>
+									<label class="quiz_thumb quiz_thumb_5">
+										<input type="checkbox" value="qwqww" />
+										<div class="img_box">
+											<img src="img/1.jpg" alt="" />
+										</div>
+										<span class="quiz_thumb_val">Спасибо, ничего не надо</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz_tab" data-index = "8">
+							<div class="quiz_title quiz_title_2">
+								<h3>спасибо за ответы!</h3>
+								<h3>оставьте свой телефон. мы вышлем на него расчет стоимости вашей кухни</h3>
+								<h4>+ каталог и подарок при заказе кухни </h4>
+							</div>
+							<div class="quiz_form">
+								<div class="input_wrapp">
+									<h3>Имя</h3>
+									<input type="text" name="name" required />
+									<p class="error_text">Заполните поле</p>
+								</div>
+								<div class="input_wrapp">
+									<h3>Номер телефона</h3>
+									<input type="tel" name="tel" required />
+									<p class="error_text">Заполните поле</p>
+								</div>
+							</div>
+						</div>			
+						<div class="quiz_footer">
+							<div>
+								<button type="button" class="grey_pill closeQuiz lp_close_popup">Закрыть</button>
+							</div>
+							<div>
+								<button type="button" class="red_pill nextQuiz"><i class="triangle"></i>Далее</button>
+							</div>
+						</div>
+						<div class="quiz_footer quiz_submit_wrapp">
+							<div>
+								<button type="button" class="grey_pill backQuiz">назад</button>
+							</div>
+							<div>
+								<button type="button" class="red_pill submitQuiz"><i class="triangle"></i>получить результаты расчета</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Quiz -->
+		</div>
+	</div>
+
+	<div class="lp_popup" data-popup = "catalog_popup">
+		<div class="lp_popup_content catalog_popup_content">
+			<button type="button" class="close lp_close_popup"></button>
+			<div class="catalog_popup_title">
+				<h3>Введите свой номер телефона, чтобы<br /> перейти в онлайн-каталогмебели</h3>
+			</div>
+			<div class="form_2_wrapp">
+				<form>
+					<div class="input_wrapp_2">
+						<input type="tel" placeholder="Ваш телефон" class="error" />
+						<p class="error_text">Ввендите телефон</p>
+					</div>
+					<div class="submit_wrapp">
+						<button type="submit" class="yellow_pill_2">Перейти в каталог</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>	
+
+	<!-- / Popup -->
+	<div class="lp_popup" data-popup = "succes_popup">		
+		<div class="lp_popup_content succes_popup">
+			<button type="button" class="close"></button>
+		</div>
+	</div>
+	<a href="#" class="succesPopupLink" data-popup-link="succes_popup"></a>
+	<div class="popup_bg lp_popup_bg"></div>
+
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 	<script src="vendors/js/jquery.js"></script>
+	<!-- <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script> -->
 	<script src="js/scripts.js"></script>
-
 </body>
 </html>
