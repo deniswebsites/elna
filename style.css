@@ -337,7 +337,7 @@ textarea:focus {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+        z-index: 4;
 }
 
 .header_site_row {
@@ -391,16 +391,17 @@ textarea:focus {
 .main_nav {
     display: flex;
     display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 .main_nav li {
-    display: inline-block;
-    vertical-align: top;
     padding: 5px 5px;
 }
 
 .main_nav li a {
     display: block;
+    text-align: center;
     padding: 3px 5px 2px 5px;
     border: 1px solid #AC1417;
     border-radius: 5px;
@@ -509,7 +510,7 @@ textarea:focus {
     background: transparent;
     cursor: pointer;
     position: relative;
-    top: 6px;
+    top: 2px;
     z-index: 11;
     border: 1px solid transparent;
 }
@@ -518,8 +519,8 @@ textarea:focus {
     display: block;
     width: 27px;
     height: 2px;
-    background: #466896;
-    margin: 0 auto 7px auto;
+    background: #AE150E;
+    margin: 0 auto 4px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -987,6 +988,7 @@ textarea:focus {
     -webkit-align-items: center;
     justify-content: center;
     -webkit-justify-content: center;
+    text-align: center;
     min-height: 50px;
     background: #FAD71E;
     border-radius: 5px;
@@ -1110,9 +1112,14 @@ textarea:focus {
     transition-timing-function: ease;
 }
 
-.dropdown_item.active .red_btn span:nth-child(2) {
+.dropdown_item .red_btn span:nth-child(2) {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+}
+
+.dropdown_item.active .red_btn span:nth-child(2) {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
 }
 
 .dropdown_item_title {
@@ -1126,7 +1133,7 @@ textarea:focus {
     position: relative;
 }
 
-.dropdown_item_title:after {
+/*.dropdown_item_title:after {
     display: block;
     content: "";
     width: 24px;
@@ -1164,7 +1171,7 @@ textarea:focus {
 .dropdown_item.active .dropdown_item_title:after {
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
-}
+}*/
 
 .dropdown_item_title h3 {
     font-weight: 700;
