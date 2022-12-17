@@ -72,7 +72,6 @@ $(document).ready(function() {
       var mapZoom = $("#map").attr("data-zoom");
       var lat = $("#map").attr("data-lat");
       var long = $("#map").attr("data-long");
-      console.log(mapZoom +"  "+ lat +"  "+long);
       ymaps.ready(function () {        
           var myMap = new ymaps.Map('map', {
               center: [long, lat],
