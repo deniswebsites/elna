@@ -20,6 +20,7 @@ $(window).load(function() {
 });
 
 $(window).resize(function() {
+  bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
   getAnimation();
 });
 
@@ -252,6 +253,10 @@ $(document).ready(function() {
         $('html, body').stop().animate({
           'scrollTop': $(hrefAttr).offset().top+2
         }, 500);
+        if(bodyWidth <= 767) {
+            $("#resp_nav").fadeOut(300);
+            $(".respmenubtn").removeClass("active");
+        }
       }
     });
 
