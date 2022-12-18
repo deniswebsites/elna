@@ -1696,9 +1696,9 @@ footer {
 }
 
 .quiz_thumb input:checked + .img_box {
-    -webkit-box-shadow: 0 10px 15px 0 rgba(0,0,0,.3);
-    -moz-box-shadow: 0 10px 15px 0 rgba(0,0,0,.3);
-    box-shadow: 0 10px 15px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 10px 15px 0 rgb(172, 20, 23, .5);
+    -moz-box-shadow: 0 10px 15px 0 rgb(172, 20, 23, .5);
+    box-shadow: 0 10px 15px 0 rgb(172, 20, 23, .5);
 }
 
 .quiz_thumb .img_box img {
@@ -2056,6 +2056,18 @@ footer {
 
 .input_wrapp input.error + .error_text {
     opacity: 1;
+}
+
+.prevQuiz.hidden {
+    display: none;
+}
+
+.nextQuiz.hidden {
+    display: none;
+}
+
+.submitQuiz.hidden {
+    display: none;
 }
 
 /*-- /Quiz --*/
