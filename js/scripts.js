@@ -103,24 +103,45 @@ $(document).ready(function() {
       });
       parent.removeClass("active");
       parentWrapp.find("[data-index = '"+nextActiveIndex+"']").addClass("active");
-      if(activeIndex + 1 >= countQuizTabs) {
-        $(".quiz_footer").addClass("hidden");
-        $(".quiz_submit_wrapp").addClass("visible");
+      if(nextActiveIndex == countQuizTabs) {
+        $(".submitQuiz").removeClass("hidden");
+        $(".nextQuiz").addClass("hidden");
+      }
+      if(activeIndex + 1 < countQuizTabs) {
+        $(".submitQuiz").addClass("hidden");
+        $(".nextQuiz").removeClass("hidden");
+      }
+      if(nextActiveIndex > 1) {
+        $(".prevQuiz").removeClass("hidden");
       }
     });
 
-    $(".backQuiz").on("click", function(e) {
+    $(".prevQuiz").on("click", function(e) {
       e.preventDefault();
       parentWrapp = $(this).closest(".quiz_tabs_wrapp");
-      parentWrapp.find(".quiz_tab").removeClass("active");
-      parentWrapp.find("[data-index = '1']").addClass("active");
-      $(".quiz_footer").removeClass("hidden");
-      $(".quiz_submit_wrapp").removeClass("visible");
+      parent = parentWrapp.find(".quiz_tab.active");      
+      activeIndex = parseInt(parent.attr("data-index"));
+      nextActiveIndex = activeIndex - 1;
       countQuizTabs = parentWrapp.find(".quiz_tab").length;
       barPercent = 100 / countQuizTabs;
       $(".quiz_steps_bar").css({
-        "width" : barPercent + "%"
+        "width" : nextActiveIndex*barPercent + "%"
       });
+      parentWrapp.find(".quiz_tab").removeClass("active");
+      parentWrapp.find("[data-index = '"+nextActiveIndex+"']").addClass("active");
+      if(nextActiveIndex <= 1) {
+        $(".prevQuiz").addClass("hidden");
+      } 
+      if(nextActiveIndex > 1) {
+        $(".prevQuiz").removeClass("hidden");
+      }
+      if(nextActiveIndex < countQuizTabs) {
+        $(".submitQuiz").addClass("hidden");
+        $(".nextQuiz").removeClass("hidden");
+      } else {
+        $(".submitQuiz").removeClass("hidden");
+        $(".nextQuiz").addClass("hidden");
+      }
     });
 
     var error, this_form, name, tel;
@@ -244,12 +265,10 @@ $(document).ready(function() {
 
     // -----------
 
-    $('a[href^="#"]').on('click', function (e) {
+    $('.main_nav a[href^="#"]').on('click', function (e) {
       e.preventDefault();
       var hrefAttr = $(this).attr("href");
       if( hrefAttr.length > 0 && hrefAttr != "#" ) {
-        $(".main_nav a").removeClass("active");
-        $(this).addClass("active");
         $('html, body').stop().animate({
           'scrollTop': $(hrefAttr).offset().top+2
         }, 500);
@@ -258,6 +277,15 @@ $(document).ready(function() {
             $(".respmenubtn").removeClass("active");
         }
       }
+    });
+
+    $(".main_nav a").mousedown(function(e) {
+      $(".main_nav a").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $(".main_nav a").mouseup(function(e) {
+      $(".main_nav a").removeClass("active");
     });
 
     // -----------
