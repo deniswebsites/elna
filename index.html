@@ -23,9 +23,12 @@
 				<div class="row">
 					<div class="header_site_row">
 						<div class="left">
-							<a href="#" class="logo">
+							<a href="#" class="logo novisible_767">
 								<img src="img/logo.svg" alt="" />
 								<p>изготовление корпусной мебели на заказ в москве</p>
+							</a>
+							<a href="#" class="logo visible_767">
+								<img src="img/logo_resp.png" alt="" />
 							</a>
 						</div>
 						<div class="center">
@@ -42,7 +45,7 @@
 							<div class="tel_wrapp">
 								<a href="tel:89162456585" class="tel_link">8 (916) 245-6585</a>
 								<p>Получите консультацию от мастера мебельщика</p>
-							</div>			
+							</div>		
 							<button class="respmenubtn">
 								<span></span>
 								<span></span>
@@ -96,9 +99,12 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="yellow_pill" data-popup-link = "quiz_popup">Рассчитать стоимость онлайн</a>
+					<div class="btn_wrapp">
+						<a href="#" class="yellow_pill" data-popup-link = "quiz_popup">Рассчитать стоимость онлайн</a>
+					</div>
 				</div>
-				<img class="promo_img animate fadeIn" style="transition-delay: .7s" src="img/promo_img.png" alt="" />
+				<img class="promo_img animate fadeIn novisible_600" style="transition-delay: .7s" src="img/promo_img.png" alt="" />
+				<img class="promo_img animate fadeIn visible_600" style="transition-delay: .7s" src="img/promo_img_resp.png" alt="" />
 			</div>
 		</section>
 		<!-- /Section 1 - Main Page -->
@@ -336,7 +342,7 @@
 		<!-- Section 5 - Main Page -->
 		<section class="sect_5" id="contacts">
 			<div class="row row_2">
-				<div class="map" id="map" data-zoom = "16" data-lat = "37.601214" data-long="55.586960" ></div>
+				<!-- <div class="map" id="map" data-zoom = "16" data-lat = "37.601214" data-long="55.586960" ></div> -->
 			</div>
 		</section>
 		<!-- /Section 5 - Main Page -->
@@ -798,7 +804,7 @@
 
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 	<script src="vendors/js/jquery.js"></script>
-	<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+	<!-- <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script> -->
 	<script src="js/scripts.js"></script>
 </body>
 </html>

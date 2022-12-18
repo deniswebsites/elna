@@ -274,10 +274,22 @@ h1 {
     padding: 0 10px;
 }
 
+.novisible_767 {
+	display: none;
+}
+
+.visible_767 {
+	display: block;
+}
+
 /*-- Header --*/
 
 .header_site {
+	width: 100%;
     padding: 17px 0 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .header_site_row > .left {
@@ -306,12 +318,12 @@ h1 {
 #resp_nav {
 	display: none;
 	width: 100%;
-	height: calc(100vh - 70px);
+	height: calc(100vh - 67px);
 	overflow-y: auto;
 	margin: 0;
 	padding: 10px 10px 15px 10px;
 	position: fixed;
-	top: 70px;
+	top: 67px;
 	left: 0;
 	z-index: 13;
 	background: #fff;
@@ -330,10 +342,6 @@ h1 {
 
 .tel_wrapp {
     padding-top: 9px;
-}
-
-.main_nav {
-
 }
 
 .main_nav li {
@@ -448,26 +456,35 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 
+.novisible_600 {
+	display: none;
+}
+
+.visible_600 {
+	display: block;
+}
+
 h1 {
     font-size: 14px;
     line-height: 19px;
 }
 
 .header_site {
-    padding: 17px 0 45px 0;
+    padding: 17px 0 2px 0;
     background-color: #fff;
 }
 
 /*-- Section 1 - Main Page --*/
 
 .sect_1_promo {
-    padding: 120px 0 14px 0;
+    padding: 2px 0 14px 0;
+    margin-top: 110px;
 }
 
 .sect_1_promo > .row:before {
     width: 260px;
-    top: -66px;
-    right: -110px;
+    top: -130px;
+    right: -132px;
 }
 
 .promo_descript {
@@ -497,24 +514,29 @@ h1 {
 }
 
 .promo_descript h1 {
-    padding: 5px 0;
+    padding: 5px 0 3px 0;
 }
 
 .promo_descript p {
-    font-size: 6px;
+    font-size: 7px;
     line-height: 9px;
 }
 
 .thumbs_1_wrapp {
-    margin: 3px 0px 7px 7px;
+    margin: 3px 0px 7px 0;
 }
 
 .thumb_1 {
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 .thumb_1 > div:nth-child(1) {
     width: 50px;
+}
+
+.thumb_1 > div:nth-child(2) {
+    width: calc(100% - 50px);
+    padding-left: 3px;
 }
 
 .thumb_1 img {
@@ -533,9 +555,9 @@ h1 {
 }
 
 .promo_img {
-    top: 46px;
-    right: -140px;
-    width: 400px;
+    top: 33px;
+    right: 0;
+    width: auto;
 }
 
 .btn_wrapp {
@@ -649,7 +671,7 @@ h2 {
 
 .contacts_box p {
     padding: 2px 0;
-    font-size: 8px;
+    font-size: 9px;
     line-height: 13px;
 }
 

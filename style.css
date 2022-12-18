@@ -327,6 +327,14 @@ textarea:focus {
     text-align: left;
 }
 
+.visible_767 {
+    display: none;
+}
+
+.visible_600 {
+    display: none;
+}
+
 /*-------------------------------------------*/
 /* ----- HEADER ------ */
 /*-------------------------------------------*/
@@ -1237,12 +1245,12 @@ footer {
 
 .footer_two_cols > .left_col {
     width: 50%;
-    padding: 10px 10px 10px 11.5%;
+    padding: 10px 10px 10px 12%;
 }
 
 .footer_two_cols > .right_col {
     width: 50%;
-    padding: 10px 0 10px 14%;
+    padding: 10px 0 10px 14.5%;
 }
 
 .footer_title {
@@ -1256,7 +1264,7 @@ footer {
 }
 
 .contacts_box {
-    max-width: 315px;
+    max-width: 360px;
 }
 
 .contacts_box h3 {
@@ -1270,7 +1278,7 @@ footer {
 
 .contacts_box p {
     padding: 5px 0;
-    font-size: 8px;
+    font-size: 13px;
     line-height: 22px;
     letter-spacing: .8px;
     color: rgba(255, 255, 255, .45);
