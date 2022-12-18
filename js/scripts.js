@@ -224,7 +224,7 @@ $(document).ready(function() {
       }
     });
     $(document).on("mouseup", function(e) {
-      if($(".popup").is(":visible")) {
+      if($(".lp_popup").is(":visible")) {
         e.preventDefault();
         hide_element = $(".popup_content");
         if (!hide_element.is(e.target)
